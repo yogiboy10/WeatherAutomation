@@ -1,0 +1,9 @@
+{
+  "WEB_APP_URL": "https://www.ndtv.com/", //application URL
+  "APP_USERNAME": "", // application user name if required
+  "APP_PASSWORD": "", // application password if required
+  "FLUSH_REPORT": "true", // delete the old reports in the Reports directory,
+  "VARIANCE": {
+    "KELVIN": "5"
+  }
+}
