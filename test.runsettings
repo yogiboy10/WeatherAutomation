@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Configurations that affect the Test Framework -->
+  <RunConfiguration>
+    <MaxCpuCount>1</MaxCpuCount>
+    <!-- Path relative to directory that contains .runsettings file-->
+    <ResultsDirectory>.\TestResults</ResultsDirectory>
+
+    <!-- x86 or x64 -->
+    <!-- You can also change it from the Test menu; choose "Processor Architecture for AnyCPU Projects" -->
+    <TargetPlatform>x86</TargetPlatform>
+
+    <!-- Framework35 | [Framework40] | Framework45 -->
+    <TargetFrameworkVersion>.NETCoreApp,Version=v2.2</TargetFrameworkVersion>
+
+    <!-- Path to Test Adapters -->
+    <TestAdaptersPaths>C:\Program Files (x86)\Microsoft Visual Studio\2017\TestAgent\Common7\IDE\CommonExtensions\Microsoft\TestWindow\</TestAdaptersPaths>
+
+    <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
+    <!-- Specify timeout in milliseconds. A valid value should be greater than 0 -->
+    <TestSessionTimeout>120000</TestSessionTimeout>
+  </RunConfiguration>
+
+  <!-- Configurations for data collectors -->
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <!-- <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <Configuration>
+          <CodeCoverage>
+            <ModulePaths>
+              <Exclude>
+                <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
+              </Exclude>
+            </ModulePaths>
+
+            <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
+            <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
+            <CollectFromChildProcesses>True</CollectFromChildProcesses>
+            <CollectAspDotNet>False</CollectAspDotNet>
+
+          </CodeCoverage>
+        </Configuration>
+      </DataCollector>-->
+
+      <DataCollector uri="C:\Program Files (x86)\Microsoft Visual Studio\2019\TestAgent\Common7\IDE\Extensions\TestPlatform\Extensions\V1" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen">
+        <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
+        <Configuration>
+          <!-- Set "sendRecordedMediaForPassedTestCase" to "false" to add video attachments to failed tests only -->
+          <MediaRecorder sendRecordedMediaForPassedTestCase="true"  xmlns="">           ​
+            <ScreenCaptureVideo bitRate="512" frameRate="2" quality="20" />​
+          </MediaRecorder>​
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+
+  <!-- Parameters used by tests at run time -->
+  <TestRunParameters>
+    <Parameter name="webAppUrl" value="http://localhost" />
+    <Parameter name="webAppUserName" value="Admin" />
+    <Parameter name="webAppPassword" value="Password" />
+  </TestRunParameters>
+
+  <!-- Adapter Specific sections -->
+
+  <!-- MSTest adapter -->
+  <MSTest>
+    <MapInconclusiveToFailed>True</MapInconclusiveToFailed>
+    <CaptureTraceOutput>false</CaptureTraceOutput>
+    <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
+    <DeploymentEnabled>False</DeploymentEnabled>
+    <AssemblyResolution>
+      <Directory path="D:\Automation\TestSuite\XViewTestSuite\XView\SanityRunner\bin\Debug\netcoreapp2.2\" includeSubDirectories="false"/>
+    </AssemblyResolution>
+  </MSTest>
+
+</RunSettings>

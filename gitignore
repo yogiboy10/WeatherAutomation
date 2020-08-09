@@ -1,0 +1,63 @@
+.idea/
+*.sln.iml
+
+ 
+
+Install/
+**/*.user
+**/publish/
+dependencies/
+
+ 
+
+# Compiled source #
+###################
+**/[Dd]ebug/
+**/[Rr]elease/
+**/x64/
+**/build/
+**/[Bb]in/
+**/[Oo]bj/
+
+ 
+
+# NuGet Packages
+# *.nupkg
+# The packages folder can be ignored because of Package Restore
+# **/packages/*
+# except build/, which is used as an MSBuild target.
+# !**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+ 
+
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+ 
+
+# Folders #
+###########
+**/.vs/
+**/[Dd]ist/
+**/[Tt]est/
+**/[Ll]ogs/
+**/SanityRunner/Reports/
+
+ 
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+node_modules
